@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #eaf5f7;
+    height: 100dvh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 9px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.calculator, .results {
+    padding: 20px;
+    flex: 1;
+}
+
+.calculator {
+    background-color: #f6fafd;
+    width: 100%;
+}
+
+.results {
+    background-color: #053451;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   border-radius:0 0 0 70px;
+   text-align: center;
+}
+.results p{
+    color: #767474;
+}
+
+h1, h2 {
+    margin: 0 0 20px;
+}
+
+.form-group {
+    margin: 0 15px 10px 10px;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+article input{
+    height: 45px;
+}
+.mort input:hover{
+    border: #babab9 1.5px solid;
+}
+.mort input:active{
+    color: #efec5d 2px solid;
+} 
+.radio-group label {
+    display: block;
+    margin-right: 10px;
+    padding: 6px;
+    border-radius: 4px;
+}
+.primary label:hover{
+    border: #efec5d 1.5px solid;
+}
+.primary label{
+    border: rgb(123, 120, 120) solid;
+}
+.primary label:active{
+    background-color: #f9f8be;
+}
+.primary label:focus{
+    background-color: #f5f5cf;
+}
+
+button {
+    background-color: #efec5d;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 70%;
+    margin-top: 10px;
+    height: 30px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+button:hover {
+   opacity: 0.7;
+} 
+
+#result-text {
+    text-align: center;
+    font-size: 18px;
+}
+span{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
+.clear-all {
+    /* position:absolute; */
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #727578;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+
+.clear-all:hover {
+    opacity: 0.9px;
+}
+.btn{
+    width: 15px;
+    height: 15px;
+    padding-right: 10px;
+}
+ figure{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    width: 100%;
+
+ }
+ form button{
+    border-radius: 40px;
+ }
+ .result-img{
+    display:block;
+    text-align: center;
+ }
+.result-text{
+    display: none;
+    text-align: center;
+}
+
+ .figure{
+    background: #2c2727 0.5px;
+    height: 150px;
+    padding: 30px;
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border-top: #efec5d 2px solid;
+ }
+ .figure p{
+   line-height: 1px;
+   word-spacing:0.2px;
+ }
+ .pra{
+    font-size: small;
+ }
+ .mon{
+    font-size: 50px;
+ }
+.rate{
+    display:flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   gap: 0;
+   
+}
+.rate span{
+    background-color: #b9bbbd;
+    width: 30%;
+    height: 45px;
+    display: grid;
+    place-content:center;
+    margin: 0;
+    padding: 0;
+}
+.head{
+    color: #5f5d5d;
+}
+.rate input{
+    border: 0;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.radio-group{
+    text-align: start;
+}
+
+
+ @media(max-width:480px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+    }
+    figure{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    figure button{
+        display: inline-flex;
+    }
+    .secondary{
+        width: 50%;
+    }
+
+    span{ 
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-group{
+        width: 90%;
+    }
+    .results{
+        border-radius:0 0 0 0;
+        
+    }
+    #calculate{
+        font-size: smaller;
+        width: 80%;
+        height:40px ;
+    }
+    
+ }
